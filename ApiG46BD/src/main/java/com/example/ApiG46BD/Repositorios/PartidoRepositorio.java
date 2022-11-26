@@ -9,5 +9,7 @@ import com.example.ApiG46BD.Modelos.PartidoModelo;
 public interface PartidoRepositorio extends MongoRepository<PartidoModelo, Long> {
     ArrayList<PartidoModelo> findBycategoria (String categoria);
     ArrayList<PartidoModelo> findByevento (String evento);
-    ArrayList<PartidoModelo> findByequipo (String equipo);   
+    ArrayList<PartidoModelo> findByequipolocal (String equipolocal);
+    ArrayList<PartidoModelo> findByequipovisitante (String equipovisitante);
+
 }

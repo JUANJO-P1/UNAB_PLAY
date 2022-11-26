@@ -44,10 +44,16 @@ public class PartidoControlador {
         return servicio.buscarPartidoxEvento(evento);
     }
 
-    @GetMapping("/buscarpartidoxequipo/{equipo}")
+    @GetMapping("/buscarpartidoxequipolocal/{equipolocal}")
     //http://localhost:8080/partido/buscarpartidoxequipo
-    public Optional<PartidoModelo> buscarPartidoxEquipo(@PathVariable("equipo") Long equipo){
-        return servicio.buscarPartidoxEquipo(equipo);
+    public Optional<PartidoModelo> buscarPartidoxEquipolocal(@PathVariable("equipolocal") Long equipolocal){
+        return servicio.buscarPartidoxEquipolocal(equipolocal);
+    }
+
+    @GetMapping("/buscarpartidoxequipolocal/{equipolocal}")
+    //http://localhost:8080/partido/buscarpartidoxequipo
+    public Optional<PartidoModelo> buscarPartidoxEquipovisitante(@PathVariable("equipovisitante") Long equipovisitante){
+        return servicio.buscarPartidoxEquipovisitante(equipovisitante);
     }
 
     @DeleteMapping("/eliminar/{partido}")

@@ -30,8 +30,12 @@ public class PartidoServicio {
         return (ArrayList<PartidoModelo>) repositorio.findById(evento);
     }
     
-    public ArrayList<PartidoModelo> buscarPartidoxEquipo(){
-        return (ArrayList<PartidoModelo>) repositorio.findById(equipo);
+    public ArrayList<PartidoModelo> buscarPartidoxEquipolocal(){
+        return (ArrayList<PartidoModelo>) repositorio.findById(equipolocal);
+    }
+
+    public ArrayList<PartidoModelo> buscarPartidoxEquipovisitante(){
+        return (ArrayList<PartidoModelo>) repositorio.findById(equipovisitante);
     }
 
     //metodo para eliminar un partido, returna un boolena. Si elimino true, si no elimino false.
