@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.ApiG46BD.Modelos.PartidoModelo;
 import com.example.ApiG46BD.Servicios.PartidoServicio;
+//comentario
 
 @RequestMapping("/partido")
 //http://localhost:8080/partido
