@@ -1,6 +1,8 @@
 package com.example.ApiG46BD.Servicios;
+
 import java.util.ArrayList;
 
+import org.apache.tomcat.util.bcel.Const;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,20 +25,19 @@ public class PartidoServicio {
 
     //metodos para buscar un partido por tipo de dato (categoría, evento o equipo)
     public ArrayList<PartidoModelo>  buscarPartidoxCategoria(){
-        return (ArrayList<PartidoModelo>) repositorio.findById(categoria);
+        return (ArrayList<PartidoModelo>) repositorio.findById(ategoria);
     }
 
     public ArrayList<PartidoModelo> buscarPartidoxEvento(){
         return (ArrayList<PartidoModelo>) repositorio.findById(evento);
     }
     
-    public ArrayList<PartidoModelo> buscarPartidoxEquipolocal(){
+    public ArrayList<PartidoModelo> buscarPartidoxEquipo(){
         return (ArrayList<PartidoModelo>) repositorio.findById(equipolocal);
-    }
-
-    public ArrayList<PartidoModelo> buscarPartidoxEquipovisitante(){
         return (ArrayList<PartidoModelo>) repositorio.findById(equipovisitante);
+
     }
+    
 
     //metodo para eliminar un partido, returna un boolena. Si elimino true, si no elimino false.
     public boolean eliminarUsuario(Long idPartido){
